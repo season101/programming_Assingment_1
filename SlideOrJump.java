@@ -12,14 +12,18 @@ public class SlideOrJump {
     private String move;  // Storage for the move that player chooses to move
                           
     /**
-    * 
+    * Argument Constructor for SlideOrJump clas, used to initialize instance
+    * variables for SlideOrJump game.
+    * @param board the int[] representation of collection of different values of    *              cells in a board.
+    *                         
     */
     public SlideOrJump(int[] board){
         this.board = board;
-        move = "";
+        this.move = "";
     }
 
-    public long totalCostDP(int index){
+    
+    private long totalCostDP(int index){
 
         long totalCost = 0;
         long[] storage = new long[board.length];
@@ -81,6 +85,12 @@ public class SlideOrJump {
         return totalCostDP(board.length-1);
     }
 
+    /**
+    * This method is used to return the best moves made by the player using Dynamic 
+    * programming
+    *
+    * 
+    */
     public String getMoves(){
       if(move.equals("")){
         totalCostDP(board.length-1);
