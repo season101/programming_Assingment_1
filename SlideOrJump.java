@@ -1,7 +1,19 @@
+/**
+* SlideOrJump Class is the model of game called Slide or Jump. The game starts with player standing on one end of 
+* board and player has to reach the end of board with minimum cost required since every time player moves to the cell, * he owes the money. So the player has a choice to either slide to adjacent cell or to jump next cell of adjacent cell.
+*
+*@author Sijan Malla
+*
+*/
 public class SlideOrJump {
-    int[] board;
-    String move;
-
+  
+  /*Declaring instance variables*/
+    private int[] board;  // an array representation of cells of the game board
+    private String move;  // Storage for the move that player chooses to move
+                          
+    /**
+    * 
+    */
     public SlideOrJump(int[] board){
         this.board = board;
         move = "";
